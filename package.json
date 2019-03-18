@@ -1,0 +1,23 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Eat-Da-Burger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elp11999/burger.git"
+  },
+  "author": "Michael Henderson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elp11999/burger/issues"
+  },
+  "homepage": "https://github.com/elp11999/burger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}
