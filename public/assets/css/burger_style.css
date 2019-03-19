@@ -2,11 +2,34 @@ body {
   background-color: #ffca63;
 }
 
+
+.main-title {  
+  text-align: center;
+}
+
+.burger-lists {
+  background: #ffca63;
+  width: 33%;
+  margin: 100px auto 0 auto;
+  border: 1px solid black;
+  text-align: center;
+  padding-right: 35px;
+}
+
+.burger-create {
+  background: #ffca63;
+  width: 33%;
+  margin: 100px auto 0 auto;
+  border: 1px solid black;
+  text-align: center;
+}
+
 li {
   padding: 5px;
   margin: 5px;
   list-style: none;
-  background: #faebd7;
+  background: aqua;
+  background: white; 
 }
 
 .label {

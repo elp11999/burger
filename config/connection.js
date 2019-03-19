@@ -1,13 +1,16 @@
 
+// Load DotEnv library
+require("dotenv").config();
+
 // Load MySql library
 var mysql = require("mysql");
 
 // Create MySql connection object
 var connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "elp1elp1",
+    host     : process.env.MYSQL_HOSTNAME,
+    port     : process.env.MYSQL_PORT,
+    user     : process.env.MYSQL_USER,
+    password : process.env.MYSQL_PASSWORD,
     database: "burgers_db"
  });
 

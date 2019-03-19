@@ -29,7 +29,7 @@ app.set("view engine", "handlebars");
 app.use(routes);
 
 // Setup Heroku and default port address to listen on
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 // Issue Application startup message
 console.log("Burger: Server started.");
