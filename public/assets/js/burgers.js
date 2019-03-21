@@ -68,6 +68,9 @@ $(function() {
     }).then(
       function() {
         console.log("created new Burger");
+
+        // Clear the burger name
+        $("#burger-name").val("");
         // Reload the page to get the updated list
         location.reload();
       }
