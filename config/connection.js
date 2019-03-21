@@ -1,3 +1,11 @@
+// Whenever a user submits a burger's name, the app will display the burger on the left
+// side of the page -- waiting to be devoured.
+// Each burger in the waiting area also has a Devour it! button. When the button is clicked,
+// the burger will move to the right side of the page.
+// The app will store every burger in a database, whether devoured or not.
+//
+// connection.js - MySql Connection library for the Eat-Da-Burger application
+// 
 
 // Load DotEnv library
 require("dotenv").config();

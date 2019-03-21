@@ -1,6 +1,9 @@
+<!--
+	The body of the unordered lists for the burger lists dynamically created by Handlebars
+-->
 <li>
 	{{burger_name}}
     {{#if devoured}}
-	    <button class="change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">DEVOURE IT!</button>
+	    <button class="btn btn-primary pull-right change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">Devour it!</button>
     {{/if}}
 </li>

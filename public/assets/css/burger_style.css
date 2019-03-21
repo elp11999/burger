@@ -1,7 +1,10 @@
+/*
+ *  CSS for the Eat-Da-Burger application
+ */
+
 body {
   background-color: #ffca63;
 }
-
 
 .main-title {  
   text-align: center;
@@ -11,7 +14,7 @@ body {
   background: #ffca63;
   width: 33%;
   margin: 100px auto 0 auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   text-align: center;
   padding-right: 35px;
 }
@@ -20,8 +23,14 @@ body {
   background: #ffca63;
   width: 33%;
   margin: 100px auto 0 auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  padding-bottom: 5px;
   text-align: center;
+}
+
+.sams-image {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 li {
@@ -32,16 +41,38 @@ li {
   background: white; 
 }
 
-.label {
-  font-weight: bold;
-}
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
-}
-
 .form-group {
+  margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.change-devour,
+#add-burger {
+  padding-top: 0px;
+  height: 25px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 990px) {
+
+  .sams-image { 
+      height: 100px;
+      width: 200px;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+
+  .sams-image { 
+      height: 100px;
+      width: 150px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  .sams-image { 
+      height: 100px;
+      width: 125px;
+  }
 }
