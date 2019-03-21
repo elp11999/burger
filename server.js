@@ -12,6 +12,14 @@
 
 //
 // https://frozen-escarpment-32292.herokuapp.com/
+
+// mysql://olcgqkjqrtb5an9h:jzoasz62ckt5b541@dyud5fa2qycz1o3v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/uiezm7582wctd1xn
+// host: dyud5fa2qycz1o3v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+// user: olcgqkjqrtb5an9h
+// pswd: jzoasz62ckt5b541
+// port: 3306
+// db:   uiezm7582wctd1xn
+//
 //
 
 // Load Routes library
