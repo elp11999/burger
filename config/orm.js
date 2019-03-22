@@ -99,6 +99,7 @@ var orm  =  {
                     objToSql(vals) +
                     " WHERE " +
                     condition + ";";
+    console.log("update: " + sqlQuery);
                     
     // Issue query
     connection.query(sqlQuery, function(err, result) {

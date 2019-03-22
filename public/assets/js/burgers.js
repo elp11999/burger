@@ -52,8 +52,11 @@ $(function() {
     var burger_name = $("#burger-name").val().trim();
 
     // Ensure the user entered a burger
-    if (burger_name.length == 0)
+    $(".message").text("");
+    if (burger_name.length == 0) {
+      $(".message").text("Please enter a burger name.");
       return;
+    }
 
     // Setup burger object for post request
     var newBurger = {

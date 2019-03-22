@@ -14,8 +14,7 @@ body {
   background: #ffca63;
   width: 33%;
   margin: 100px auto 0 auto;
-  /* border: 1px solid black; */
-  text-align: center;
+  text-align: left;
   padding-right: 35px;
 }
 
@@ -23,26 +22,21 @@ body {
   background: #ffca63;
   width: 33%;
   margin: 100px auto 0 auto;
-  /* border: 1px solid black; */
   padding-bottom: 5px;
   text-align: center;
 }
 
-.sams-image {
+#burger-name {
   margin-top: 5px;
+}
+
+.burger-detail {  
+  background: white;
+  padding: 5px;
   margin-bottom: 5px;
 }
 
-li {
-  padding: 5px;
-  margin: 5px;
-  list-style: none;
-  background: aqua;
-  background: white; 
-}
-
-.form-group {
-  margin-top: 5px;
+.sams-image {
   margin-bottom: 5px;
 }
 
@@ -51,6 +45,12 @@ li {
   padding-top: 0px;
   height: 25px;
   width: 100px;
+} 
+
+.message {
+  margin-top: 5px;
+  font-weight: bold;
+  color: red
 }
 
 @media only screen and (max-width: 990px) {

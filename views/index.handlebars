@@ -6,17 +6,17 @@
   <div class="container">
     <div class="row">
       <div class="burger-lists">
-        <ul>
-          {{#each burgers}}
-            {{#unless devoured}}
-              {{> burgers/burger-block devoured=true}}
-            {{/unless}}
-          {{/each}}
-        </ul>
+        {{#each burgers}}
+          {{#unless devoured}}
+            <div>
+              <p class="burger-detail">{{burger_name}}<button class="btn btn-primary pull-right change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">Devour it!</button></p>
+            </div>
+          {{/unless}}
+        {{/each}}
       </div>
-      <div class=" burger-create">
+      <div class="burger-create">
         <img class="sams-image" src="/assets/images/SamsBurgerJoint.png" alt="sams image" width="300" height="100">
-        <!-- <h1 class="main-title">Eat-Da-Burger!</h1> -->
+        <h2 class="main-title">Eat-Da-Burger!</h2>
         <img src="/assets/images/Burger.png" alt="burger image" width="75" height="75">
         <form>
           <div class="form-group">
@@ -24,12 +24,15 @@
           </div>
         </form>
         <button class="btn btn-primary" id="add-burger">Add Burger</button>
+        <h5><p class="message"></p></h5>
       </div>
       <div class="burger-lists">
         <ul>
           {{#each burgers}}
             {{#if devoured}}
-              {{> burgers/burger-block devoured=false}}
+              <div>
+                <p class="burger-detail">{{burger_name}}</p>
+              </div>
             {{/if}}
           {{/each}}
         </ul>
