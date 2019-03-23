@@ -1,3 +1,6 @@
+//
+// Eat-Da-Burger!
+//
 // Whenever a user submits a burger's name, the app will display the burger on the left
 // side of the page -- waiting to be devoured.
 // Each burger in the waiting area also has a Devour it! button. When the button is clicked,
@@ -21,15 +24,15 @@ var burgers  =  {
   },
 
   // Function to add a burger
-  addBurger: function(cols, vals, cb) {
-    orm.insertOne("burgers", cols, vals, function(res) {
+  addBurger: function(vals, cb) {
+    orm.insertOne("burgers", vals, function(res) {
       cb(res);
     });
   },
 
   // Function to update a burger
-  updateBurger: function(vals, condition, cb) {
-    orm.updateOne("burgers", vals, condition, function(res) {
+  updateBurger: function(val, id, cb) {
+    orm.updateOne("burgers", val, id, function(res) {
       cb(res);
     });
   }

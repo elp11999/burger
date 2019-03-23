@@ -61,7 +61,7 @@ $(function() {
     // Setup burger object for post request
     var newBurger = {
       burger_name: burger_name,
-      devour: false
+      devour: 0
     };
 
     // Send the POST request.

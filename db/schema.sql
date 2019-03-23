@@ -5,15 +5,16 @@
 -- Drop database if exists
 drop database if exists burgers_db;
 
--- Create the burger_db datbase
+-- Create the burger_db database
 create database burgers_db;
 
 -- Set burger_db as the current database
 use burgers_db;
 
--- Create burgers table
+-- Create the burgers table
 create table burgers (
     id int primary key not null auto_increment,
     burger_name varchar(256) not null,
-    devoured boolean
+    devoured boolean,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
 );

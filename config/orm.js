@@ -1,3 +1,6 @@
+//
+// Eat-Da-Burger!
+//
 // Whenever a user submits a burger's name, the app will display the burger on the left
 // side of the page -- waiting to be devoured.
 // Each burger in the waiting area also has a Devour it! button. When the button is clicked,
@@ -9,40 +12,6 @@
 
 // Load connection module
 var connection = require("./connection.js");
-
-// Helper function to add "?" marks
-// This function was borrowed from previous activities :)
-function printQuestionMarks(num) {
-  var arr = [];
-  for (var i = 0; i < num; i++) {
-    arr.push("?");
-  }
-  return arr.toString();
-}
-
-// Helper function to convert object key/value pairs to SQL syntax
-// This function was borrowed from previous activities :)
-function objToSql(ob) {
-  var arr = [];
-
-  // loop through the keys and push the key/value as a string int arr
-  for (var key in ob) {
-    var value = ob[key];
-    // check to skip hidden properties
-    if (Object.hasOwnProperty.call(ob, key)) {
-      // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
-      if (typeof value === "string" && value.indexOf(" ") >= 0) {
-        value = "'" + value + "'";
-      }
-      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-      // e.g. {sleepy: true} => ["sleepy=true"]
-      arr.push(key + "=" + value);
-    }
-  }
-
-  // translate array of strings to a single comma-separated string
-  return arr.toString();
-}
 
 // ORM object
 var orm  =  {
@@ -67,14 +36,14 @@ var orm  =  {
   },
 
   // Function to add a new row to a table
-  insertOne: function(table, cols, vals, cb) {
+  insertOne: function(table, vals, cb) {
 
-    // Create query
-    var sqlQuery = "INSERT into " +
-                    table + " (" + 
-                    cols.toString() + ")" +
-                    " values(" +
-                    printQuestionMarks(vals.length) + ");";
+    // SQL to add a new burger
+    var sqlQuery = "insert into " +
+                    table +
+                    " (burger_name, devoured) values(?, ?);";
+    //console.log("insertOne: " + sqlQuery);
+    //console.log("insertOne: " + vals);
 
     // Issue query
     connection.query(sqlQuery, vals, function(err, result) {
@@ -90,16 +59,17 @@ var orm  =  {
   },
 
   // Function to update a table columns
-  updateOne: function(table, vals, condition, cb) {
+  updateOne: function(table, val, id, cb) {
 
     // Create query
     var sqlQuery = "UPDATE " +
                     table +
                     " SET " + 
-                    objToSql(vals) +
-                    " WHERE " +
-                    condition + ";";
-    console.log("update: " + sqlQuery);
+                    "devoured = " +
+                    val +
+                    " WHERE id = " +
+                    id + ";";
+    //console.log("updateOne: " + sqlQuery);
                     
     // Issue query
     connection.query(sqlQuery, function(err, result) {
